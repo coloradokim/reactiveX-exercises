@@ -2,11 +2,9 @@
 var names = ["Ben", "Jafar", "Matt", "Priya", "Brian"]
 
 var printNames = function (arr) {
-  var thing = []
   for (var counter = 1; counter < arr.length; counter++) {
-    thing += arr[counter]
+    console.log(arr[counter]);
   }
-  return thing
 }
 
-console.log(printNames(names));
+printNames(names);
