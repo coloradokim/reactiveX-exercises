@@ -11,5 +11,5 @@ function nameReverser(arr) {
 	})
 	return rrAeman
 }
-
+console.log(nameArr);
 console.log(nameReverser(nameArr));
