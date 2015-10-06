@@ -1,10 +1,12 @@
-var nums = [1,2,3,4]
+var names = ["Kimberly", "Catherine", "Patricia", "Daniel", "Jeremiah"]
 
-function random (arr) {
-  var newArr = arr.map(function(item) {
-    return item * Math.random()
+function filterAndMap (arr) {
+  return arr.filter(function(item) {
+    return item.length === 8;
+  }).map(function(item) {
+    return item + item.length + "!"
   })
-  return newArr
 }
-console.log(nums);
-console.log(random(nums));
+
+
+console.log(filterAndMap(names));
