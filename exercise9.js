@@ -1,3 +1,6 @@
+// Exercise 9: Flatten the movieLists array into an array of video ids
+//
+// Let's start by using two nested forEach loops to collect the id of every video in the two-dimensional movieLists array.
 
 	var movieLists = [
 		{
@@ -45,7 +48,14 @@
 	]
 	allVideoIdsInMovieLists = [];
 
-	// ------------   INSERT CODE HERE!  -----------------------------------
-	// Use two nested forEach loops to flatten the movieLists into a list of
-	// video ids.
-	// ------------   INSERT CODE HERE!  -----------------------------------
+
+	function flatten(arr) {
+		arr.forEach(function(item) {
+			item.videos.forEach(function(el){
+				allVideoIdsInMovieLists.push(el.id)
+			})
+		})
+		return allVideoIdsInMovieLists
+		}
+
+	console.log(flatten(movieLists));
