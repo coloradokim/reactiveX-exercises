@@ -5,13 +5,17 @@
 // A predicate is a function that accepts an item in the array,
 // and returns a boolean indicating whether the item should be retained in the new array.
 
-var names = ["Kimberly", "Catherine", "Patricia", "Daniel", "Jeremiah"]
+var names = ["Kimberly", "Catherine", "Patricia", "Daniel", "Jeremiah", "Schlesinger"]
 
-function longName (arr) {
-  var longNames = arr.filter(function(item) {
-    return item.length > 7
+function longName(arr) {
+  nameArr = []
+  arr.filter(function(item) {
+    if (item.length >= 9) {
+      nameArr.push(item)
+    }
   })
-  return longNames
+  return nameArr
 }
+
 
 console.log(longName(names));

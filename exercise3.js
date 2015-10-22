@@ -37,12 +37,12 @@
 		}
 	]
 
-function netFlix () {
-	videoAndTitlePairs = [];
-  newReleases.forEach(function(el) {
-    videoAndTitlePairs.push({id:el.id, title:el.title})
-  })
-	return videoAndTitlePairs;
+function netFlix(arr) {
+	var videoAndTitlePairs = []
+	arr.forEach(function(item){
+		videoAndTitlePairs.push({id: item.id, title: item.title})
+	})
+	return videoAndTitlePairs
 }
 
 console.log(netFlix(newReleases));

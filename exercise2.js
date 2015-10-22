@@ -2,10 +2,10 @@
 
 var names = ["Ben", "Jafar", "Matt", "Priya", "Brian"];
 
-function printNames (arr) {
+function printNames(arr) {
   newArr = []
-  arr.forEach(function(el) {
-    newArr.push(el)
+  arr.forEach(function(item) {
+    newArr.push(item)
   })
   return newArr
 }

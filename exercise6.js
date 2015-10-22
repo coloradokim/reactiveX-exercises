@@ -40,12 +40,12 @@
 
 videos = [];
 function ratingCheck (arr) {
-  arr.forEach(function(item) {
-    if (item.rating === 5.0) {
-      return videos.push(item.title)
-    }
-  })
-  return videos
+	arr.forEach(function(item) {
+		if (item.rating === 5.0) {
+			 videos.push(item.title)
+		}
+	})
+	return videos
 }
 
 console.log(ratingCheck(newReleases));

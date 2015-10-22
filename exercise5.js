@@ -38,9 +38,9 @@ var newReleases = [
   }
 ]
 
-function movieMap (arr) {
-  var newArr = arr.map(function(video) {
-    return {id: video.id, title: video.title}
+function movieMap(arr) {
+  var newArr = arr.map(function(item) {
+    return {id: item.id, title: item.title}
   })
   return newArr
 }

@@ -5,11 +5,10 @@
 
 var nameArr = ["Kim", "Patty", "Dan", "Catherine", "Jeremiah"]
 
-function nameReverser(arr) {
-	var rrAeman = arr.map(function(item) {
-		return item.split("").reverse().join("")
+function nameUpper(arr) {
+	var newArr = arr.map(function(item) {
+		return item.toUpperCase();
 	})
-	return rrAeman
+	return newArr
 }
-console.log(nameArr);
-console.log(nameReverser(nameArr));
+console.log(nameUpper(nameArr));
