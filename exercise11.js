@@ -1,3 +1,7 @@
+// Exercise 11: Use map() and concatAll() to project and flatten the movieLists into an array of video ids
+//
+// Hint: use two nested calls to map() and one call to concatAll().
+
 var movieLists = [
 			{
 				name: "New Releases",
@@ -43,14 +47,18 @@ var movieLists = [
 			}
 		];
 
-function smashTogether (arr) {
-  var arr1= arr[0].videos
-  var smashedArr= arr1.concat(arr[1].videos)
-  return smashedArr.map(function(item){
-    return item.id
-  })
+// Hint: use two nested calls to map() and one call to concatAll().
+// map videos.id into two different arrays, and then flatten those arrays with concat()
+
+function smashTogether(arr){
+	var splitArr= arr.map(function(movieList) {
+		return movieList.videos.map(function(item){
+			return item.id
+		})
+	})
+	return splitArr.concat.apply([], splitArr)
 }
+
+
+
 console.log(smashTogether(movieLists));
-	// ------------   INSERT CODE HERE!  -----------------------------------
-	// Use map and concatAll to flatten the movieLists in a list of video ids.
-	// ------------   INSERT CODE HERE!  -----------------------------------
