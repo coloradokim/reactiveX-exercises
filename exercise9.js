@@ -46,16 +46,15 @@
 			]
 		}
 	]
+
 	allVideoIdsInMovieLists = [];
-
-
-	function flatten(arr) {
-		arr.forEach(function(item) {
-			item.videos.forEach(function(el){
-				allVideoIdsInMovieLists.push(el.id)
+	function flatten (arr) {
+		arr.forEach(function(movieList) {
+			movieList.videos.forEach(function(video) {
+				allVideoIdsInMovieLists.push(video.id)
 			})
 		})
 		return allVideoIdsInMovieLists
-		}
+	}
 
 	console.log(flatten(movieLists));

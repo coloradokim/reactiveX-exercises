@@ -36,11 +36,12 @@
 		];
 
 function movieFilter (arr) {
-	return arr.filter(function(movie){
-		return movie.rating === 5.0
-	}).map(function(movie){
-		return {title: movie.title, rating: movie.rating}
+	arr.filter(function(item){
+		return item.rating === 5.0;
+	}).map(function(item) {
+		return item.id
 	})
 }
+
 
 console.log(movieFilter(newReleases));
